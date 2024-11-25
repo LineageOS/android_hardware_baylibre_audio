@@ -49,6 +49,7 @@ class ModulePrimary final : public Module {
 
   private:
     ChildInterface<ITelephony> mTelephony;
+    int32_t kStandardLatencyMs;
 };
 
 }  // namespace aidl::android::hardware::audio::core

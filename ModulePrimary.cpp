@@ -19,6 +19,7 @@
 #define LOG_TAG "AHAL_ModulePrimary"
 #include <Utils.h>
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 
 #include "core-impl/ModulePrimary.h"
 #include "primary/PrimaryMixer.h"
@@ -47,6 +48,12 @@ ModulePrimary::ModulePrimary(std::unique_ptr<Configuration>&& config)
     : Module(Type::DEFAULT, std::move(config)) {
     // Force PrimaryMixer initialization to apply mixer controls at boot
     (void)primary::PrimaryMixer::getInstance();
+
+    // 85 ms is chosen considering 4096 frames @ 48 kHz. This is the value which allows
+    // the virtual Android device implementation to pass CTS. Hardware implementations
+    // should have significantly lower latency.
+    kStandardLatencyMs = ::android::base::GetIntProperty("persist.vendor.audio.primary.latency_ms",
+        ::android::base::GetIntProperty("ro.vendor.audio.primary.latency_ms", 85));
 }
 
 ndk::ScopedAStatus ModulePrimary::getTelephony(std::shared_ptr<ITelephony>* _aidl_return) {
@@ -129,10 +136,6 @@ ndk::ScopedAStatus ModulePrimary::createMmapBuffer(const AudioPortConfig& portCo
 
 int32_t ModulePrimary::getNominalLatencyMs(const AudioPortConfig& portConfig) {
     static constexpr int32_t kLowLatencyMs = 10;
-    // 85 ms is chosen considering 4096 frames @ 48 kHz. This is the value which allows
-    // the virtual Android device implementation to pass CTS. Hardware implementations
-    // should have significantly lower latency.
-    static constexpr int32_t kStandardLatencyMs = 85;
     return hasMmapFlag(portConfig.flags.value()) ? kLowLatencyMs : kStandardLatencyMs;
 }
 
