@@ -27,7 +27,8 @@ namespace aidl::android::hardware::audio::core::primary {
 int PrimaryMixer::getAlsaCard() {
     // Read from system property, default to 0 if not set
     int card = ::android::base::GetIntProperty("persist.vendor.audio.primary.card",
-                                                kDefaultAlsaCard);
+        ::android::base::GetIntProperty("ro.vendor.audio.primary.card",
+            kDefaultAlsaCard));
     LOG(DEBUG) << __func__ << ": Using ALSA card " << card
                << " (from persist.vendor.audio.primary.card)";
     return card;
@@ -37,7 +38,8 @@ int PrimaryMixer::getAlsaCard() {
 int PrimaryMixer::getAlsaDevice() {
     // Read from system property, default to 0 if not set
     int device = ::android::base::GetIntProperty("persist.vendor.audio.primary.device",
-                                                  kDefaultAlsaDevice);
+        ::android::base::GetIntProperty("ro.vendor.audio.primary.device",
+            kDefaultAlsaDevice));
     LOG(DEBUG) << __func__ << ": Using ALSA device " << device
                << " (from persist.vendor.audio.primary.device)";
     return device;

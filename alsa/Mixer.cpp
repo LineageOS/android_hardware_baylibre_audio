@@ -64,7 +64,9 @@ Mixer::loadMixerControlsConfig() {
     // Check for custom config file location via system property
     std::string configPath = ::android::base::GetProperty(
         "persist.vendor.audio.mixer.config",
-        "/vendor/etc/mixer_controls.xml");
+        ::android::base::GetProperty(
+            "ro.vendor.audio.mixer.config",
+            "/vendor/etc/mixer_controls.xml"));
 
     LOG(INFO) << __func__ << ": Loading mixer controls config from " << configPath;
 
@@ -292,7 +294,9 @@ Mixer::Mixer(int card) : mMixer(mixer_open(card)), mMixerControls(initializeMixe
         // Apply initialization controls from mixer_controls.xml
         std::string configPath = ::android::base::GetProperty(
             "persist.vendor.audio.mixer.config",
-            "/vendor/etc/mixer_controls.xml");
+            ::android::base::GetProperty(
+                "ro.vendor.audio.mixer.config",
+                "/vendor/etc/mixer_controls.xml"));
         applyInitControls(mMixer, configPath);
     }
 }
