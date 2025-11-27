@@ -1,5 +1,5 @@
 package {
-    default_applicable_licenses: ["hardware_generic_audio_license"],
+    default_applicable_licenses: ["hardware_baylibre_audio_license"],
 }
 
 /*
@@ -20,13 +20,13 @@ package {
 
 
 cc_library_shared {
-    name: "liberasersw_generic",
+    name: "liberasersw_baylibre",
     defaults: [
-        "generic_aidlaudioeffectservice_defaults",
+        "baylibre_aidlaudioeffectservice_defaults",
     ],
     srcs: [
         "Eraser.cpp",
-        ":effectCommonFile_generic",
+        ":effectCommonFile_baylibre",
     ],
     relative_install_path: "soundfx",
     visibility: [
