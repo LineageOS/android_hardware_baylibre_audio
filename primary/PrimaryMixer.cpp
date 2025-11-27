@@ -66,7 +66,8 @@ int PrimaryMixer::findAlsaCardByName(const std::string& cardName) {
 int PrimaryMixer::getAlsaCard() {
     // First, try to find card by name if specified
     std::string cardName = ::android::base::GetProperty(
-        "persist.vendor.audio.primary.card_name", "");
+        "persist.vendor.audio.primary.card_name",
+        ::android::base::GetProperty("ro.vendor.audio.primary.card_name", ""));
 
     if (!cardName.empty()) {
         int card = findAlsaCardByName(cardName);
@@ -81,7 +82,8 @@ int PrimaryMixer::getAlsaCard() {
 
     // Fall back to card index from property
     int card = ::android::base::GetIntProperty("persist.vendor.audio.primary.card",
-                                                kDefaultAlsaCard);
+        ::android::base::GetIntProperty("ro.vendor.audio.primary.card",
+            kDefaultAlsaCard));
     LOG(DEBUG) << __func__ << ": Using ALSA card " << card
                << " (from persist.vendor.audio.primary.card)";
     return card;
@@ -91,7 +93,8 @@ int PrimaryMixer::getAlsaCard() {
 int PrimaryMixer::getAlsaDevice() {
     // Read from system property, default to 0 if not set
     int device = ::android::base::GetIntProperty("persist.vendor.audio.primary.device",
-                                                  kDefaultAlsaDevice);
+        ::android::base::GetIntProperty("ro.vendor.audio.primary.device",
+            kDefaultAlsaDevice));
     LOG(DEBUG) << __func__ << ": Using ALSA device " << device
                << " (from persist.vendor.audio.primary.device)";
     return device;
