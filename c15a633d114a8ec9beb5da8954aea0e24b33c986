@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00ed7c01_afc1c986",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2025-12-05T16:56:29Z",
+      "side": 1,
+      "message": "Hold this, need to update for the new card prop.",
+      "revId": "c15a633d114a8ec9beb5da8954aea0e24b33c986",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
