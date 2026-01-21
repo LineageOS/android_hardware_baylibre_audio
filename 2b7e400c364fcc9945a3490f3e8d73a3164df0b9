@@ -70,6 +70,30 @@
       },
       "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efcc2b19_6cb86321",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-01-21T23:38:17Z",
+      "side": 1,
+      "message": "If a persist property is hardcoded, then the devs want to change the default, it\u0027s impossible to know if the user set that value and wants to keep it or if it\u0027s still at default. Plus, I\u0027m pretty sure once a persist value is set, that an ota wouldn\u0027t change it anyways, which is another problem.",
+      "parentUuid": "95922fdc_690c04d9",
+      "range": {
+        "startLine": 9,
+        "startChar": 68,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
