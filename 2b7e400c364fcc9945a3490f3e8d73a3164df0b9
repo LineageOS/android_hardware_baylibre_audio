@@ -22,6 +22,30 @@
       },
       "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e320dbc1_91dbc8b4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-01-21T23:14:41Z",
+      "side": 1,
+      "message": "Which part is the question? My wording or the concept?",
+      "parentUuid": "0b69c813_b5781494",
+      "range": {
+        "startLine": 9,
+        "startChar": 68,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
