@@ -111,6 +111,24 @@
       "message": "A persist prop is supposed to be set once and never changed.",
       "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf294846_987c9e0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-01-21T23:43:35Z",
+      "side": 1,
+      "message": "I\u0027ve seen persist props as things that a user is supposed to be able to change. Hence seeing many places across aosp were ro.$thing is read for the build time default and persist.$thing is available for runtime override. Which is what I\u0027m doing here. That setup doesn\u0027t get stuck in the problems I described.",
+      "parentUuid": "7d426feb_936e0c6a",
+      "revId": "2b7e400c364fcc9945a3490f3e8d73a3164df0b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
