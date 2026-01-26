@@ -24,7 +24,7 @@ apex {
         "libdynamicsprocessingsw_generic",
         "libenvreverbsw_generic",
         "libequalizersw_generic",
-        "liberasersw_generic",
+        "liberaser_generic",
         "libextensioneffect_generic",
         "libhapticgeneratorsw_generic",
         "libloudnessenhancersw_generic",
@@ -40,5 +40,7 @@ apex {
         "android.hardware.audio.service-aidl.generic.rc",
         "android.hardware.audio.service-aidl.generic.xml",
         "android.hardware.bluetooth.audio.xml",
+        "audio_eraser_classifier_model",
+        "audio_eraser_separator_model",
     ],
 }
