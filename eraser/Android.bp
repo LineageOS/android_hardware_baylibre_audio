@@ -20,7 +20,7 @@ package {
 
 
 cc_library_shared {
-    name: "liberasersw_generic",
+    name: "liberaser_generic",
     defaults: [
         "generic_aidlaudioeffectservice_defaults",
     ],
