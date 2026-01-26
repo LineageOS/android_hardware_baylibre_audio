@@ -16,6 +16,23 @@
       "message": "Fixes building on 23.2. Verified that audio still works on odin2.",
       "revId": "eb1de1cca204dbcb07ae861d7ca3ea2c965921ac",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e5961e7_440d6c2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-01-26T00:29:28Z",
+      "side": 1,
+      "message": "Looking at doing a more thorough update from qpr2.",
+      "revId": "eb1de1cca204dbcb07ae861d7ca3ea2c965921ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
