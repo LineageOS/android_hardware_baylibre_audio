@@ -26,7 +26,6 @@ cc_library_shared {
     ],
     srcs: [
         "LoudnessEnhancerSw.cpp",
-        ":effectCommonFile_generic",
     ],
     relative_install_path: "soundfx",
     visibility: [

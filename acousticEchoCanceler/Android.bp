@@ -26,7 +26,6 @@ cc_library_shared {
     ],
     srcs: [
         "AcousticEchoCancelerSw.cpp",
-        ":effectCommonFile_generic",
     ],
     relative_install_path: "soundfx",
     visibility: [
